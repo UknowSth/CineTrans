@@ -6,7 +6,8 @@ This repository contains the official PyTorch implementation of CineTrans, a nov
 
 ## 🎥 Demo
 https://github.com/user-attachments/assets/19b7df2e-17f6-4f2f-a31e-fe08216a06da
-## 📥 Installation  
+## 📥 Installation
+
 ## 🤗 Checkpoint  
 ## 🖥️ Inference  
 ## 🖼️ Gallery  
