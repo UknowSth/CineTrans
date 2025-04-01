@@ -46,3 +46,8 @@ shot_mask: # False
   - [False, False, False, False]
   - [False]
   - [False, False, True, True] 
+
+prompt : {
+    'general_caption' : "The video opens with a close-up of a delicate flower in a small pot, bathed in natural light. The camera transitions to a different angle, showcasing the flower and pot from the side, highlighting the colors and the subtle shadows cast by the light. The peaceful, calm atmosphere of the scene is emphasized.",
+    'shot_info' : [32, 32], # ensure a total of 64 frames
+}

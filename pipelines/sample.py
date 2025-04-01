@@ -74,12 +74,12 @@ def main(args):
     if not os.path.exists(args.save_img_path):
         os.makedirs(args.save_img_path)
 
-    prompt = {
-        'general_caption' : "The video opens with a close-up of a delicate flower in a small pot, bathed in natural light. The camera transitions to a different angle, showcasing the flower and pot from the side, highlighting the colors and the subtle shadows cast by the light. The peaceful, calm atmosphere of the scene is emphasized.",
-        'shot_info' : [32, 32], # ensure a total of 64 frames
-    }
+    # prompt = {
+    #     'general_caption' : "The video opens with a close-up of a delicate flower in a small pot, bathed in natural light. The camera transitions to a different angle, showcasing the flower and pot from the side, highlighting the colors and the subtle shadows cast by the light. The peaceful, calm atmosphere of the scene is emphasized.",
+    #     'shot_info' : [32, 32], # ensure a total of 64 frames
+    # }
 
-    videos = videogen_pipeline(prompt, 
+    videos = videogen_pipeline(args.prompt, 
         video_length=args.video_length, 
         height=args.image_size[0], 
         width=args.image_size[1], 
