@@ -1,1 +1,0 @@
-python pipelines/sample.py --config configs/sample.yaml
