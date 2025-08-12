@@ -29,6 +29,9 @@
   <link rel="stylesheet" href="./settings/fontawesome.all.min.css">
   <link rel="stylesheet" href="./settings/academicons.min.css">
   <link rel="stylesheet" href="./settings/index.css">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=block" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=block" rel="stylesheet">
+
 
   <script src="./settings/jquery.min.js.下载"></script>
   <script defer="" src="./settings/fontawesome.all.min.js.下载"></script>
@@ -40,7 +43,27 @@
     max-width: 2400px;
     margin: 0 auto;
   }
-</style><style type="text/css">@font-face {
+</style>
+
+<style>
+  .rainbow-word {
+    background: linear-gradient(90deg, #F4A6C8, #F1A8A1, #D88A8A);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    animation: rainbow-slide 5s linear infinite;
+  }
+
+  @keyframes rainbow-slide {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+  }
+</style>
+
+<style type="text/css">
+@font-face {
   font-family: "xm-iconfont";
   src: url('//at.alicdn.com/t/font_792691_ptvyboo0bno.eot?t=1574048839056');
   /* IE9 */
@@ -774,7 +797,7 @@ xm-select[size='mini'] .item--divided {
       <div class="container is-fullhd">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">CineTrans: Learning to Generate Videos with Cinematic Transitions via Masked Diffusion Models</h1>
+          <h1 class="title is-1 publication-title" style="font-family: 'Raleway', sans-serif; font-weight: 150;"><span class="rainbow-word">CineTrans:</span> Learning to Generate Videos with Cinematic Transitions via Masked Diffusion Models</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <p>Xiaoxue Wu<sup>1,2*</sup>,</p></span>
@@ -828,126 +851,15 @@ xm-select[size='mini'] .item--divided {
   </div>
 </section>
 
-
-<section class="hero is-light is-small">
-  <div class="hero-body">
-	  <div class="columns is-centered has-text-centered">
-	  <div class="container is-max-width">
-
-    <!-- <h2 class="title is-3">Multi-shot</h2>
-    <h2 class="title is-3">Text-to-Video Generation</h2>
-    <h2 class="title is-3">(finetuned on UNet framework)</h2> -->
-		<!-- <h2 class="title is-5">(Click image to play video)</h2> -->
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel"> 
-        <!-- -->
-        <div>
-          <div class="item item-steve">
-            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/video/vintage_compressed_.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div class="content" style="font-family: Arial; font-style: italic">
-            Vintage camera, dimly lit room, antique objects. <br> Shot1:[0s,2.5s] Shot2:[2.5s,5s] Shot3:[5s,8s]   <br>  <b>shot count: 3</b> 
-          </div>
-          <div class="item item-steve">
-            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/video/white_flower_compressed_.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div class="content" style="font-family: Arial; font-style: italic">
-            Close-up of flower in light, highlighting colors and shadows. <br> Shot1:[0s,4s] Shot2:[4s,8s] <br><b>shot count: 2</b>
-          </div>
-          <div style="height: 20px;"></div>
-        </div>
-        <div>
-          <div class="item item-steve">
-            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/video/colorful_dawn_compressed_.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div class="content" style="font-family: Arial; font-style: italic">
-            Tranquil lakeside at sunset, ripples, birds, calm atmosphere.  <br> Shot1:[0s,4s] Shot2:[4s,8s] <br><b>shot count: 2</b>
-          </div>
-          <div class="item item-steve">
-            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-              <source src="./static//video/leaf_compressed_.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div class="content" style="font-family: Arial; font-style: italic">
-            Leaf falls from tree, floats down. <br> Shot1:[0s,2.5s] Shot2:[2.5s,5s] Shot3:[5s,8s]  <br> <b>shot count: 3</b>
-          </div>
-        </div>
-        <div>
-          <div class="item item-steve">
-            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-              <source src="./static//video/snow_compressed_.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div class="content" style="font-family: Arial; font-style: italic">
-            Snow-covered village, falling snowflakes.<br> Shot1:[0s,2.75s] Shot2:[2.75s,5.5s] Shot3:[5.5s,8s]  <br> <b>shot count: 3</b>
-          </div>
-          <div class="item item-steve">
-            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/video/pizza_compressed_.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div class="content" style="font-family: Arial; font-style: italic">
-            Showcasing the art of preparing a homemade pizza. <br> Shot1:[0s,1.25s] Shot2:[1.25s,5.5s] Shot3:[5.5s,8s]  <br><b>shot count: 3</b>
-          </div>
-        </div>
-        <div>
-          <div class="item item-steve">
-            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-              <source src="./static//video/coffee_cup_compressed_.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div class="content" style="font-family: Arial; font-style: italic">
-            Steaming coffee cup, ceramic texture, soft ambient light. <br> Shot1:[0s,4s] Shot2:[4s,8s] <br> <b>shot count: 2</b>
-          </div>
-          <div class="item item-steve">
-            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/video/city_night_compressed_.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div class="content" style="font-family: Arial; font-style: italic">
-            City at night, rooftop figure, skyline under starry sky. <br> Shot1:[0s,2.5s] Shot2:[2.5s,5s] Shot3:[5s,8s]  <br> <b>shot count: 3</b>
-          </div>
-        </div>
-      </div>
-    </div>
+<section>
+  <div class="card">
+    <h2><span class="rainbow-word">TL;DR</span></h2>
+    <p>
+      We propose a novel video generation framework that enables <b>cinematic transitions between shots using masked diffusion</b>. Our method ensures precise shot control and stylistic coherence, trained on a custom curated multi-shot dataset, and further transfers effectively in a training-free setting.
+    </p>
   </div>
 </section>
-
-
-
-<section class="section">
-  <div class="container is-fullhd">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            Although video generation has advanced rapidly, research on multi-shot video generation remains limited. 
-Even with scaled-up models and massive datasets, their shot transition capabilities remain rudimentary and unstable, largely confining generated videos to single-shot sequences.
-To bridge this gap, we propose a novel framework CineTrans that aims to produce multi-shot videos with cinematic transitions aligning with film editing.
-To facilitate insights into the film editing style, we construct a multi-shot video-text dataset Cine250K with detailed shot labels. 
-Furthermore, our analysis of existing video diffusion models reveals a strong connection between attention maps and shot transitions, which likely contributes to cinematic multi-shot control.
-Accordingly, we construct a mask mechanism enabling transitions at arbitrary positions. Using the mask mechanism and finetuning on our multi-shot video dataset, CineTrans generates cinematic multi-shot videos while adhering to the film editing style, avoiding unstable transitions or simple concatenations. Additionally, we introduce comprehensive evaluation metrics tailored for this task, providing professional insights into multi-shot video generation capabilities. Experimental results demonstrate that CineTrans achieves strong performance in transition control, frame consistency, and overall video quality.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<div style="height: 40px;"></div>
 
 <section class="hero teaser">
   <div class="hero-body">
@@ -960,6 +872,13 @@ Accordingly, we construct a mask mechanism enabling transitions at arbitrary pos
         </div>
     </center>
   </div>
+  <div style="text-align: center;">
+    <img src="static/teaser/Method.png" alt="Figure"  style="max-width: 70%; height: auto; width: 1500px;">
+  </div>
+  <div class="content" style="font-family: Geneva; text-align: center;"">
+    Overview
+  </div>
+  <div style="height: 40px; text-align: center;"></div>
 </section>
 
 
@@ -968,397 +887,317 @@ Accordingly, we construct a mask mechanism enabling transitions at arbitrary pos
 	  <div class="columns is-centered has-text-centered">
 	  <div class="container is-max-width">
 
-    <h2 class="title is-3">Qualitative Results</h2>
+    
+    <h2 class="title is-3">⏩ Cinetrans-DiT</h3>
+    <!-- <h2 class="title is-3">Multi-shot</h2>
+    <h2 class="title is-3">Text-to-Video Generation</h2>
+    <h2 class="title is-3">(finetuned on UNet framework)</h2> -->
 		<!-- <h2 class="title is-5">(Click image to play video)</h2> -->
-    <p>
-      Homemade pizza preparation: toppings added, baked in oven.  <b>(shot count: 3)</b></p>
     <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
+      <div id="results-carousel" class="carousel results-carousel"> 
         <div>
           <div class="item item-steve">
             <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/contrast/pizza_lavie2_compressed_.mp4"
+              <source src="./static/video/green_eyes_compressed_.mp4"
                       type="video/mp4">
             </video>
           </div>
           <div class="content" style="font-family: Arial; font-style: italic">
-            Ours
+            Emerald eyes, journal raised, wind and light embrace a woman. <br> Shot1:[0s,2.75s] Shot2:[2.75s,5s]  <br>  <b>shot count: 2</b> 
           </div>
+          <!-- <div class="item item-steve">
+            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/video/white_flower_compressed_.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="content" style="font-family: Arial; font-style: italic">
+            Close-up of flower in light, highlighting colors and shadows. <br> Shot1:[0s,4s] Shot2:[4s,8s] <br><b>shot count: 2</b>
+          </div> -->
           <div style="height: 20px;"></div>
         </div>
         <div>
           <div class="item item-steve">
             <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/contrast/pizza_cog_compressed_.mp4"
+              <source src="./static/video/jogging_compressed_.mp4"
                       type="video/mp4">
             </video>
           </div>
           <div class="content" style="font-family: Arial; font-style: italic">
-            CogVideoX
+            Focused man jogs at dawn, sun glowing on determined frame. <br> Shot1:[0s,3s] Shot2:[3s,5s]  <br><b>shot count: 2</b>
           </div>
-          <div style="height: 20px;"></div>
+          <!-- <div class="item item-steve">
+            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+              <source src="./static//video/leaf_compressed_.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="content" style="font-family: Arial; font-style: italic">
+            Leaf falls from tree, floats down. <br> Shot1:[0s,2.5s] Shot2:[2.5s,5s] Shot3:[5s,8s]  <br> <b>shot count: 3</b>
+          </div> -->
         </div>
+        <div>
+          <!-- <div class="item item-steve">
+            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+              <source src="./static//video/snow_compressed_.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="content" style="font-family: Arial; font-style: italic">
+            Snow-covered village, falling snowflakes.<br> Shot1:[0s,2.75s] Shot2:[2.75s,5.5s] Shot3:[5.5s,8s]  <br> <b>shot count: 3</b>
+          </div> -->
+          <div class="item item-steve">
+            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/video/pepper_compressed_.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="content" style="font-family: Arial; font-style: italic">
+            <!-- Salt-and-pepper gaze by rusted rails, shadowed and mysterious. <br> Shot1:[0s,2.75s] Shot2:[2.75s,5s]  <br><b>shot count: 2</b> -->
+            Wearing a leather hat, a man flicks open his silver pocket watch. <br> Shot1:[0s,2.75s] Shot2:[2.75s,5s]  <br><b>shot count: 2</b>
+          </div>
+        </div>
+        <!-- <div>
+          <div class="item item-steve">
+            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+              <source src="./static//video/yoga_compressed_.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="content" style="font-family: Arial; font-style: italic">
+            Brown-skinned woman flows in peaceful lakeside yoga. <br> Shot1:[0s,1s] Shot2:[1s,3s] Shot3:[3s,5s] <br> <b>shot count: 3</b>
+          </div>
+        </div> -->
         <div>
           <div class="item item-steve">
             <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/contrast/pizza_hunyuan_compressed_.mp4"
+              <source src="./static//video/augula_compressed_.mp4"
                       type="video/mp4">
             </video>
           </div>
           <div class="content" style="font-family: Arial; font-style: italic">
-            Hunyuan
+            A man strides through a deserted cobblestone plaza at dusk as light highlights his angular features. <br> Shot1:[0s,1s] Shot2:[1s,2.5s] Shot3:[2.5s,3.75s] Shot4:[3.75s,5s] <br> <b>shot count: 4</b>
           </div>
-          <div style="height: 20px;"></div>
-        </div>
-        <div>
-          <div class="item item-steve">
-            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/contrast/pizza_original_compressed_.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div class="content" style="font-family: Arial; font-style: italic">
-            lavie2(original)
-          </div>
-          <div style="height: 20px;"></div>
         </div>
       </div>
     </div>
-    <p>
-      Sunrise over a rocky coast, tide pool, waves return. <b>(shot count: 4)</b></p>
+    <div style="height: 25px;"></div>
+
+    <h2 class="title is-3">🎬 Cinetrans-Unet</h3>
+
     <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
+      <div id="results-carousel" class="carousel results-carousel"> 
+        <!-- -->
         <div>
           <div class="item item-steve">
             <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/contrast/coastal_lavie2_compressed_.mp4"
+              <source src="./static/video/dawn_lake_compressed_.mp4"
                       type="video/mp4">
             </video>
           </div>
           <div class="content" style="font-family: Arial; font-style: italic">
-            Ours
-          </div>
-          <div style="height: 20px;"></div>
+            Lake at dawn, mountains in morning light. <br> Shot1:[0s,2s] Shot2:[2s,3.75s] Shot3:[3.75s,5.75s] Shot4:[5.75s,8s]   <br>  <b>shot count: 4</b> 
+          </div><div style="height: 15px;"></div>
         </div>
         <div>
           <div class="item item-steve">
             <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/contrast/coastal_cog_compressed_.mp4"
+              <source src="./static/video/flower_in_pot_compressed_.mp4"
                       type="video/mp4">
             </video>
           </div>
           <div class="content" style="font-family: Arial; font-style: italic">
-            CogVideoX
-          </div>
-          <div style="height: 20px;"></div>
+            Close-up of flower in light, highlighting colors and shadows. <br> Shot1:[0s,4s] Shot2:[4s,8s] <br><b>shot count: 2</b>
+          </div> 
         </div>
+        <!-- <div>
+          <div class="item item-steve">
+            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/video/plant_compressed_.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="content" style="font-family: Arial; font-style: italic">
+            Plant on a table, revealed in tranquil room. <br> Shot1:[0s,2.75s] Shot2:[2.75s,5.5s] Shot3:[5.5s,8s] <br><b>shot count: 3</b>
+          </div>
+        </div> -->
         <div>
           <div class="item item-steve">
             <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/contrast/coastal_hunyuan_compressed_.mp4"
+              <source src="./static/video/colorful_dawn_compressed_.mp4"
                       type="video/mp4">
             </video>
           </div>
           <div class="content" style="font-family: Arial; font-style: italic">
-            Hunyuan
+            Tranquil lakeside at sunset, ripples, birds, calm atmosphere. <br> Shot1:[0s,4s] Shot2:[4s,8s]  <br><b>shot count: 2</b>
           </div>
-          <div style="height: 20px;"></div>
         </div>
+        <!-- <div> -->
+          <!-- <div class="item item-steve">
+            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+              <source src="./static//video/snow_compressed_.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="content" style="font-family: Arial; font-style: italic">
+            Snow-covered village, falling snowflakes.<br> Shot1:[0s,2.75s] Shot2:[2.75s,5.5s] Shot3:[5.5s,8s]  <br> <b>shot count: 3</b>
+          </div> -->
+          <!-- <div class="item item-steve">
+            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+              <source src="./static//video/rain_compressed_.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="content" style="font-family: Arial; font-style: italic">
+             Raindrops on leaves, flowing stream, misty forest in rain. <br> <b>shot count: 3</b>
+          </div> -->
+          <!-- <div class="item item-steve">
+            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/video/city_night_compressed_.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="content" style="font-family: Arial; font-style: italic">
+            City at night, rooftop figure, skyline under starry sky. <br> Shot1:[0s,2.5s] Shot2:[2.5s,5s] Shot3:[5s,8s]  <br> <b>shot count: 3</b>
+          </div> -->
+        <!-- </div> -->
         <div>
           <div class="item item-steve">
             <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/contrast/coastal_original_compressed_.mp4"
+              <source src="./static//video/sea_compressed_.mp4"
                       type="video/mp4">
             </video>
           </div>
           <div class="content" style="font-family: Arial; font-style: italic">
-            lavie2(original)
+            Ocean at sunset, boat silhouette, calm water reflecting light. <br> Shot1:[0s,3s] Shot2:[3s,6s] Shot3:[6s,8s]  <br> <b>shot count: 3</b>
           </div>
-          <div style="height: 20px;"></div>
+          <div style="height: 35px;"></div>
         </div>
       </div>
-    <p>
-      A cozy café by the street, glowing warmly. <b>(shot count: 2)</b></p>
+    </div>
+    <div style="height: 25px;"></div>
+
+    <h2 class="title is-3">📹 Customize (Training-free)</h3>
+    <!-- <h2 class="title is-3">📹 High consistency (Training-free)</h3> -->
+
     <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
+      <div id="results-carousel" class="carousel results-carousel"> 
         <div>
           <div class="item item-steve">
             <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/contrast/cafe_lavie2_compressed_.mp4"
+              <source src="./static/video/elsa1_compressed_.mp4"
                       type="video/mp4">
             </video>
           </div>
           <div class="content" style="font-family: Arial; font-style: italic">
-            Ours
+            Elsa in sparkling ice-blue gown walks snowy peaks. <br> Shot1:[0s,2.5s] Shot2:[2.5s,5s]   <br>  <b>shot count: 2</b> 
           </div>
           <div style="height: 20px;"></div>
         </div>
         <div>
           <div class="item item-steve">
             <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/contrast/cafe_cog_compressed_.mp4"
+              <source src="./static/video/giselle1_compressed_.mp4"
                       type="video/mp4">
             </video>
           </div>
           <div class="content" style="font-family: Arial; font-style: italic">
-            CogVideoX
+            Giselle in pastel pink ball gown wanders sunlit forest amidst fluttering birds. <br> Shot1:[0s,2.5s] Shot2:[2.5s,5s] <br><b>shot count: 2</b>
           </div>
-          <div style="height: 20px;"></div>
         </div>
         <div>
           <div class="item item-steve">
             <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/contrast/cafe_hunyuan_compressed_.mp4"
+              <source src="./static//video/elsa3_compressed_.mp4"
                       type="video/mp4">
             </video>
           </div>
           <div class="content" style="font-family: Arial; font-style: italic">
-            Hunyuan
+            Elsa in burgundy velvet gown walks enchanted castle corridor. <br> Shot1:[0s,1.5s] Shot2:[1.5s,3.25s] Shot3:[3.25s,5s] <br> <b>shot count: 3</b>
           </div>
-          <div style="height: 20px;"></div>
         </div>
+        <!-- <div>
+          <div class="item item-steve">
+            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/video/elsa2_compressed_.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="content" style="font-family: Arial; font-style: italic">
+            Elsa with braided waves in ice‑blue gown atop a moonlit frozen lake. <br> Shot1:[0s,4s] Shot2:[4s,8s] <br><b>shot count: 2</b>
+          </div>
+        </div> -->
         <div>
           <div class="item item-steve">
             <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/contrast/cafe_original_compressed_.mp4"
+              <source src="./static//video/giselle3_compressed_.mp4"
                       type="video/mp4">
             </video>
           </div>
           <div class="content" style="font-family: Arial; font-style: italic">
-            lavie2(original)
+            Giselle in cobalt‑purple jacket sips latte in a dreamy, fairytale café. <br> Shot1:[0s,1.5s] Shot2:[1.5s,3.25s] Shot3:[3.25s,5s] <br> <b>shot count: 3</b>
           </div>
-          <div style="height: 20px;"></div>
+        </div>
+        <!-- <div>
+          <div class="item item-steve">
+            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+              <source src="./static//video/giselle2_compressed_.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="content" style="font-family: Arial; font-style: italic">
+            Giselle in pastel pink ball gown wanders sunlit forest amidst fluttering birds. <br> Shot1:[0s,2.5s] Shot2:[2.5s,5s] <br><b>shot count: 2</b>
+          </div>
+        </div> -->
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container is-fullhd">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Despite significant advances in video synthesis, research into multi-shot video generation remains in its infancy. Even with scaled-up models and massive datasets, the shot transition capabilities remain rudimentary and unstable, largely confining generated videos to single-shot sequences. 
+            In this work, we introduce CineTrans, a novel framework for generating coherent multi-shot videos with cinematic, film-style transitions. 
+            To facilitate insights into the film editing style, we construct a multi-shot video-text dataset Cine250K with detailed shot annotations. Furthermore, our analysis of existing video diffusion models uncovers a strong correspondence between diffusion model attention maps and shot boundaries, which we leverage to design a mask-based control mechanism that enables transitions at arbitrary positions and transfers effectively in a training-free setting.
+            After fine-tuning on our multi-shot video dataset with the mask mechanism, CineTrans produces cinematic multi-shot sequences while adhering to the film editing style, avoiding unstable transitions or naive concatenations. 
+            Finally, we propose specialized evaluation metrics for transition control, temporal consistency and overall quality, and demonstrate through extensive experiments that CineTrans significantly outperforms existing baselines across all criteria.
+          </p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-
-<section class="hero is-light is-small">
+<section class="hero teaser">
   <div class="hero-body">
-	  <div class="columns is-centered has-text-centered">
-	  <div class="container is-max-width">
-
-    <h2 class="title is-3">Training-free Results in full attention framework</h2>
-    <h2 class="title is-3">(transfer mask mechanism to CogVideoX)</h2>
-		<!-- <h2 class="title is-5">(Click image to play video)</h2> -->
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div>
-          <div class="item item-steve">
-            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/trainingfree/cafe_compressed_.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div class="content" style="font-family: Arial; font-style: italic">
-            Cozy café at dusk, woman sipping coffee, watching passersby, streetlamps flicker.
-          </div>
-          <div style="height: 20px;"></div>
-        </div>
-        <div>
-          <div class="item item-steve">
-            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/trainingfree/palace_compressed_.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div class="content" style="font-family: Arial; font-style: italic">
-            Opulent palace with marble walls, ornate arches, manicured gardens, peaceful yet imposing.
-          </div>
-          <div style="height: 20px;"></div>
-        </div>
-        <div>
-          <div class="item item-steve">
-            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/trainingfree/pizza_compressed_.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div class="content" style="font-family: Arial; font-style: italic">
-            Chef prepares homemade pizza, emphasizing artistry and care.
-          </div>
-          <div style="height: 20px;"></div>
-        </div>
-        <div>
-          <div class="item item-steve">
-            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/trainingfree/art_compressed_.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div class="content" style="font-family: Arial; font-style: italic">
-            Artist painting in his studio, focused, adding layers, satisfied with progress.
-          </div>
-          <div style="height: 20px;"></div>
-        </div>
-      </div>
-    </div>
+    <center>
+    <h2 class="title is-3">Metric and Results</h2>
+    </center>
   </div>
+  <div style="text-align: center;">
+    <img src="static/teaser/Metric.png" alt="Figure"  style="max-width: 70%; height: auto; width: 1400px;">
+  </div>
+  <div class="content" style="font-family: Geneva; text-align: center;"">
+    Metric
+  </div>
+  <div style="height: 40px; text-align: center;"></div>
+  <div style="text-align: center;">
+    <img src="static/teaser/Results.png" alt="Figure"  style="max-width: 70%; height: auto; width: 1000px;">
+  </div>
+  <div class="content" style="font-family: Geneva; text-align: center;"">
+    Results
+  </div>
+  <div style="height: 40px; text-align: center;"></div>
 </section>
 
-
-
-<section class="hero is-light is-small">
-  <div class="hero-body" >
-	  <div class="columns is-centered has-text-centered">
-    <!-- <div style="width: 300px;"><p>aaaa</p></div> -->
-	  <div class="container is-max-width">
-
-    <h2 class="title is-3">Ablation Studies</h2>
-
-    <div class="container is-fullhd">
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <div class="content has-text-justified">
-            <p>
-              CineTrans can stably control the generation of transitions. In contrast, models without the mask mechanism, whether finetuned or not, are almost incapable of generating cinematic transitions. Direct application of the mask mechanism without further finetuning, i.e., training-free results, does indeed generate transitions. However, in this case, there is little difference in composition and subject between shots. The excessive similarity does not align with film editing, thus highlighting that the finetuning step is also essential.</p>
-              <p></p>
-          </div>
-        </div>
-      </div>
-    </div>
-  
-		<!-- <h2 class="title is-5">(Click image to play video)</h2> -->
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div>
-          <div class="content" style="font-family: Arial; font-style: italic">
-            w/ Mask, w/ Training (Ours)
-          </div>
-          <div class="item item-steve">
-            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/ablation/coffee_cup_complete_compressed_.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div style="height: 20px;"></div>
-          <div class="item item-steve">
-            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/ablation/library_complete_compressed_.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div style="height: 20px;"></div>
-          <div class="item item-steve">
-            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/ablation/read_complete_compressed_.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div style="height: 20px;"></div>
-          <div class="item item-steve">
-            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/ablation/cliff_complete_compressed_.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div style="height: 20px;"></div>
-        </div>
-        <div>
-          <div class="content" style="font-family: Arial; font-style: italic">
-            w/o Mask, w/ Training
-          </div>
-          <div class="item item-steve">
-            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/ablation/coffee_cup_training_compressed_.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div style="height: 20px;"></div>
-          <div class="item item-steve">
-            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/ablation/library_training_compressed_.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div style="height: 20px;"></div>
-          <div class="item item-steve">
-            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/ablation/read_training_compressed_.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div style="height: 20px;"></div>
-          <div class="item item-steve">
-            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/ablation/cliff_training_compressed_.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div style="height: 20px;"></div>
-        </div>
-        <div>
-          <div class="content" style="font-family: Arial; font-style: italic">
-            w/ Mask, w/o Training
-          </div>
-          <div class="item item-steve">
-            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/ablation/coffee_cup_mask_compressed_.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div style="height: 20px;"></div>
-          <div class="item item-steve">
-            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/ablation/library_mask_compressed_.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div style="height: 20px;"></div>
-          <div class="item item-steve">
-            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/ablation/read_mask_compressed_.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div style="height: 20px;"></div>
-          <div class="item item-steve">
-            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/ablation/cliff_mask_compressed_.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div style="height: 20px;"></div>
-        </div>
-        <div>
-          <div class="content" style="font-family: Arial; font-style: italic">
-            w/o Mask, w/o Training
-          </div>
-          <div class="item item-steve">
-            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/ablation/coffee_cup_no_compressed_.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div style="height: 20px;"></div>
-          <div class="item item-steve">
-            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/ablation/library_no_compressed_.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div style="height: 20px;"></div>
-          <div class="item item-steve">
-            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/ablation/read_no_compressed_.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div style="height: 20px;"></div>
-          <div class="item item-steve">
-            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/ablation/cliff_no_compressed_.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div style="height: 20px;"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <div style="height: 100px;"></div> 
 <section class="hero is-light is-small">
@@ -1375,50 +1214,12 @@ Accordingly, we construct a mask mechanism enabling transitions at arbitrary pos
         <div>
           <div class="item item-steve">
             <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-              <source src="./static//video/watch_compressed_.mp4"
+              <source src="./static//video/ship_compressed_.mp4"
                       type="video/mp4">
             </video>
           </div>
           <div class="content" style="font-family: Arial; font-style: italic">
-            Luxury watch on wooden table, light and shadow.<br> <b>shot count: 2</b>
-          </div>
-          <div class="item item-steve">
-            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-              <source src="./static//video/mist_compressed_.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div class="content" style="font-family: Arial; font-style: italic">
-            Foggy forest at dawn, dew-covered leaves. <br> <b>shot count: 4</b>
-          </div>
-          <div class="item item-steve">
-            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-              <source src="./static//video/snow2_compressed_.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div class="content" style="font-family: Arial; font-style: italic">
-            Snow-covered countryside, sleigh ride, falling snowflakes, farmhouse with smoke. <br> <b>shot count: 4</b>
-          </div>
-        </div>
-        <div>
-          <div class="item item-steve">
-            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/video/dawn_lake_compressed_.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div class="content" style="font-family: Arial; font-style: italic">
-            Lake at dawn, drifting boat, ripples, mountains in morning light. <br> <b>shot count: 4</b>
-          </div>
-          <div class="item item-steve">
-            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-              <source src="./static//video/urban_flower_compressed_.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div class="content" style="font-family: Arial; font-style: italic">
-            Blooming flower, green field, wildflowers, farmhouse in sunlight. <br> <b>shot count: 3</b>
+            A massive and luxurious cruise ship gliding gracefully across the ocean.<br> <b>shot count: 2</b>
           </div>
           <div class="item item-steve">
             <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
@@ -1433,71 +1234,12 @@ Accordingly, we construct a mask mechanism enabling transitions at arbitrary pos
         <div>
           <div class="item item-steve">
             <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/video/band_compressed_.mp4"
+              <source src="./static//video/silver_hair_compressed_.mp4"
                       type="video/mp4">
             </video>
           </div>
           <div class="content" style="font-family: Arial; font-style: italic">
-            Dimly lit studio, musicians playing instruments, warm spotlights. <br> <b>shot count: 4</b>
-          </div>
-          <div class="item item-steve">
-            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/video/cafe_compressed_.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div class="content" style="font-family: Arial; font-style: italic">
-            Cozy café, woman sipping coffee, streetlamps, gentle city hum. <br> <b>shot count: 2</b>
-          </div>
-          <div class="item item-steve">
-            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/video/colorful_flower_compressed_.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div class="content" style="font-family: Arial; font-style: italic">
-            Colorful flowers in vase, different angles, bright blooms contrast. <br> <b>shot count: 2</b>
-          </div>
-        </div>
-        <div>
-          <div class="item item-steve">
-            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/video/candle_compressed_.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div class="content" style="font-family: Arial; font-style: italic">
-            candle, vase with flowers, golden light. <br> <b>shot count: 3</b>
-          </div>
-          <div class="item item-steve">
-            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/video/city_day_compressed_.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div class="content" style="font-family: Arial; font-style: italic">
-            High-angle city, café scene, skyline with skyscrapers. <br> <b>shot count: 3</b>
-          </div>
-          <div class="item item-steve">
-            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/video/autumn_compressed_.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div class="content" style="font-family: Arial; font-style: italic">
-            Autumn forest, deer moving, swirling leaves on the ground. <br> <b>shot count: 3</b>
-          </div>
-          <div style="height: 20px;"></div>
-        </div>
-        <div>
-          <div class="item item-steve">
-            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/video/desert_compressed_.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div class="content" style="font-family: Arial; font-style: italic">
-            Desert at dawn, wind patterns, cactus, golden morning light. <br> <b>shot count: 4</b>
+            A woman with striking silver hair walks confidently through a bustling city street. <br> <b>shot count: 2</b>
           </div>
           <div class="item item-steve">
             <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
@@ -1508,101 +1250,86 @@ Accordingly, we construct a mask mechanism enabling transitions at arbitrary pos
           <div class="content" style="font-family: Arial; font-style: italic">
             Ripe fruits on wooden table, soft lighting, gentle shadows. <br> <b>shot count: 3</b>
           </div>
+        </div>
+        <div>
           <div class="item item-steve">
             <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-              <source src="./static//video/camera_lens_compressed_.mp4"
+              <source src="./static/video/deep_sea_compressed_.mp4"
                       type="video/mp4">
             </video>
           </div>
           <div class="content" style="font-family: Arial; font-style: italic">
-            Close-up of camera lens, reflecting light, with detailed structure. <br> <b>shot count: 2</b>
+            Sunlight fades into darkness and bioluminescent creatures drift through the inky waters. <br> <b>shot count: 2</b>
+          </div>
+          <div class="item item-steve">
+            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/video/candle_compressed_.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="content" style="font-family: Arial; font-style: italic">
+            candle, vase with flowers, golden light. <br> <b>shot count: 3</b>
           </div>
         </div>
         <div>
           <div class="item item-steve">
             <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-              <source src="./static//video/plant_compressed_.mp4"
+              <source src="./static/video/candle_woman_compressed_.mp4"
                       type="video/mp4">
             </video>
           </div>
           <div class="content" style="font-family: Arial; font-style: italic">
-            Close-up of plant, soft lighting, peaceful room. <br> <b>shot count: 3</b>
+            A woman delicate jawline and soft honey-brown curls framing a face lit by candlelight. <br> <b>shot count: 3</b>
           </div>
           <div class="item item-steve">
             <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-              <source src="./static//video/sea_compressed_.mp4"
+              <source src="./static/video/cafe_compressed_.mp4"
                       type="video/mp4">
             </video>
           </div>
           <div class="content" style="font-family: Arial; font-style: italic">
-            Ocean at sunset, boat silhouette, calm water reflecting light. <br> <b>shot count: 3</b>
+            Cozy café, woman sipping coffee, streetlamps, gentle city hum. <br> <b>shot count: 2</b>
+          </div>
+          <div style="height: 20px;"></div>
+        </div>
+        <div>
+          <div class="item item-steve">
+            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/video/angular_compressed_.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="content" style="font-family: Arial; font-style: italic">
+            A man strides through a cobblestone plaza at dusk as light highlights his angular features. <br> <b>shot count: 4</b>
           </div>
           <div class="item item-steve">
             <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-              <source src="./static//video/rain_compressed_.mp4"
+              <source src="./static/video/desert_compressed_.mp4"
                       type="video/mp4">
             </video>
           </div>
           <div class="content" style="font-family: Arial; font-style: italic">
-             Raindrops on leaves, flowing stream, misty forest in rain. <br> <b>shot count: 3</b>
+            Desert at dawn, wind patterns, cactus, golden morning light. <br> <b>shot count: 4</b>
           </div>
         </div>
         <div>
           <div class="item item-steve">
             <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-              <source src="./static//video/urban_autumn_compressed_.mp4"
+              <source src="./static//video/green-eye_compressed_.mp4"
                       type="video/mp4">
             </video>
           </div>
           <div class="content" style="font-family: Arial; font-style: italic">
-            Autumn village, rustic house, swirling leaves, golden fields. <br> <b>shot count: 4</b>
+            Emerald eyes, the journal raised, wind and light embrace a woman. <br> <b>shot count: 2</b>
           </div>
           <div class="item item-steve">
             <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-              <source src="./static//video/city_night2_compressed_.mp4"
+              <source src="./static//video/urban_flower_compressed_.mp4"
                       type="video/mp4">
             </video>
           </div>
           <div class="content" style="font-family: Arial; font-style: italic">
-            City at night, street corner, quiet alley, sparkling skyline. <br> <b>shot count: 4</b>
-          </div>
-          <div class="item item-steve">
-            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-              <source src="./static//video/collect_compressed_.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div class="content" style="font-family: Arial; font-style: italic">
-            Seashells on sand, intricate patterns, ambient light highlighting textures. <br> <b>shot count: 3</b>
-          </div>
-        </div>
-        <div>
-          <div class="item item-steve">
-            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-              <source src="./static//video/fruit2_compressed_.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div class="content" style="font-family: Arial; font-style: italic">
-            Fruit bowl, vibrant colors, textures, light and shadow play. <br> <b>shot count: 2</b>
-          </div>
-          <div class="item item-steve">
-            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-              <source src="./static//video/kitchen_compressed_.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div class="content" style="font-family: Arial; font-style: italic">
-            Knife on cutting board, vegetables, kitchen tools, natural light. <br> <b>shot count: 3</b>
-          </div>
-          <div class="item item-steve">
-            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-              <source src="./static//video/noodle_compressed_.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div class="content" style="font-family: Arial; font-style: italic">
-            Documenting the step-by-step preparation of a bowl of ramen. <br> <b>shot count: 3</b>
+            Blooming flower, green field, wildflowers, farmhouse in sunlight. <br> <b>shot count: 3</b>
           </div>
         </div>
       </div>
@@ -1610,12 +1337,12 @@ Accordingly, we construct a mask mechanism enabling transitions at arbitrary pos
   </div>
 </section>
 
-<section class="section" id="BibTeX">
+<!-- <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
     <pre><code>xxxxxxxxxxxxxxxxxxxxx</code></pre>
   </div>
-</section>
+</section> -->
 
 <footer class="footer">
   <div class="container">

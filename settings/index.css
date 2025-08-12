@@ -29,6 +29,7 @@ body {
 
 
 .publication-title {
+  font-family: 'Raleway', sans-serif;
 }
 
 .publication-banner {
@@ -45,6 +46,10 @@ body {
 }
 
 .publication-header .hero-body {
+}
+
+.title{
+  font-family: "Outfit", sans-serif;
 }
 
 .publication-title {
@@ -80,6 +85,8 @@ body {
 
 .author-block {
   display: inline-block;
+  font-size: large;
+  font-family: "Outfit", sans-serif;
 }
 
 .publication-banner img {
@@ -154,4 +161,27 @@ body {
 }
 #interpolation-image-wrapper img {
   border-radius: 5px;
+}
+
+p{
+  font-family: "Outfit", sans-serif;
+  font-size: large;
+}
+
+.card {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  font-family: 'Segoe UI', sans-serif;
+}
+.card h2 {
+  margin-top: 0;
+  font-size: 1.8em;
+}
+.card p {
+  font-size: 1.2em;
+  color: #333;
 }
