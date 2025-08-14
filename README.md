@@ -5,7 +5,8 @@ This repository contains the official PyTorch implementation of CineTrans, a nov
 [![Paper](https://img.shields.io/badge/Paper-arXiv-red)](你的论文链接) [![Project Page](https://img.shields.io/badge/Project-Website-blue)](https://uknowsth.github.io/CineTrans/)
 
 ## 🎥 Demo
-https://github.com/user-attachments/assets/19b7df2e-17f6-4f2f-a31e-fe08216a06da
+https://github.com/user-attachments/assets/6f112e2f-40e3-4347-bab8-3e08bfa9366c
+
 ## 📥 Installation
 1. Clone the Repository
 ```
@@ -51,3 +52,4 @@ Using a single A100 GPU, generating a single video takes approximately 40s. You 
 
 ## 📑 BiTeX  
 If you find [CineTrans](https://github.com/UknowSth/CineTrans.git) useful for your research and applications, please cite using this BibTeX:
+
