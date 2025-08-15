@@ -1,0 +1,37 @@
+task: t2v-1.3B
+size: "832*480"
+ckpt_dir: /mnt/petrelfs/wuxiaoxue/Wan2.1/Wan2.1-T2V-1.3B
+offload_model: True
+t5_cpu: True
+sample_shift: 8
+sample_guide_scale: 6
+prompt: # multi-prompt
+  - "She stands at the edge of a windswept cliff at sunrise, the golden light catching the the bridge of her nose and illuminating the gentle curve of her high cheekbones."
+  - "Wild grasses sway around her ankles as she lifts a weathered leather journal to her lips. Her eyelashes, long and still glistening with dew, cast faint shadows on her cheeks, while a loose braid woven into her curls rests gently against her collarbone."
+  - "The video captures a woman's striking emerald-green eyes, their intensity heightened by gracefully arched brows that lend her gaze a quiet confidence. Her chestnut curls tumble past her shoulders in soft, voluminous waves, a few strands catching the breeze. A straight, delicately sculpted nose adds to the classical elegance of her profile. The scene is both intimate and expansive, a solitary figure poised between earth and sky."
+
+frame_num: 81
+ulysses_size: 1
+ring_size: 1
+t5_fsdp: False
+dit_fsdp: False
+save_file: sample_videos/cinetrans-dit.mp4
+prompt_extend_target_lang: "zh"
+use_prompt_extend: False
+prompt_extend_method: "local_qwen"
+prompt_extend_model: null
+base_seed: 42
+image: null
+first_frame: null
+last_frame: null
+sample_solver: "unipc"
+
+lora_path: ./ckpt/weights.pt
+lora_rank: 64
+
+sample_steps: 50
+
+general_prompt: True
+start_masked_layer: 6 #100
+end_masked_layer: 27 #100
+mask_p: 0
