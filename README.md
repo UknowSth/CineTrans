@@ -23,7 +23,8 @@ pip install -r requirements.txt
 ```
 
 ## 🤗 Checkpoint  
-Download the required [model weights](url) and place them in the `ckpt/` directory.
+### CineTrans-Unet
+Download the required [model weights](https://huggingface.co/NumlockUknowSth/CineTrans-Unet/tree/main) and place them in the `ckpt/` directory.
 ```
 ckpt/
 │── stable-diffusion-v1-4/
@@ -35,13 +36,31 @@ ckpt/
 │── checkpoint.pt
 │── longclip-L.pt
 ```
+### CineTrans-DiT
+Download the weights of [Wan2.1-T2V-1.3B](https://huggingface.co/Wan-AI/Wan2.1-T2V-1.3B/tree/main) and [lora weights](https://huggingface.co/NumlockUknowSth/CineTrans-DiT/tree/main). Place them as:
+```
+Wan2.1-T2V-1.3B/ # original weights
+│── google/
+│   └── umt5-xxl/
+│── config.json
+│── diffusion_pytorch_model.safetensors
+│── models_t5_umt5-xxl-enc-bf16.pth
+│── Wan2.1_VAE.pth
+ckpt/
+└── weights.pt # lora weights
+```
 ## 🖥️ Inference  
 To run the inference, use the following command:
+### CineTrans-Unet
 ```
 python pipelines/sample.py --config configs/sample.yaml
 ```
 Using a single A100 GPU, generating a single video takes approximately 40s. You can modify the relevant configurations and prompt in `configs/sample.yaml` to adjust the generation process.
-
+### CineTrans-DiT
+```
+python generate.py
+```
+Using a single A100 GPU, generating a single video takes approximately 5min. You can modify the relevant configurations and prompt in `configs/t2v.yaml` to adjust the generation process.
 ## 🖼️ Gallery  
 
 | ![coffee_cup](https://github.com/user-attachments/assets/c89e9462-a77b-44eb-91b6-bfba4c4c1567) | ![white_flower](https://github.com/user-attachments/assets/f5dffe7a-69da-4cc9-ba53-3549f46df904) | ![snow](https://github.com/user-attachments/assets/85b4392d-f88c-496f-a08e-b9c5f6c8354c) |
@@ -52,4 +71,5 @@ Using a single A100 GPU, generating a single video takes approximately 40s. You 
 
 ## 📑 BiTeX  
 If you find [CineTrans](https://github.com/UknowSth/CineTrans.git) useful for your research and applications, please cite using this BibTeX:
+
 
