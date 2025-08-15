@@ -478,63 +478,6 @@ class TemporalAttention(CrossAttention):
         # cast back to the original dtype
         attention_probs = attention_probs.to(value.dtype)
 
-        # print(f'attention_probs.shape:{attention_probs.shape}')
-        ####################画QK图#######################
-        # global global_variable
-        # my_dict = {}
-        # print(f'{global_variable}/',end='',flush=True)
-        # attention_probs_1 = attention_probs[:bsz] # 取第一个数据对应的attn_prob
-        # attention_probs_1 = attention_probs_1.mean(dim=0) # 对第一个维度求均值
-        # tsp_index = global_variable // 16 # 第几个timestep
-        # layer_index = global_variable % 16 # 第几个layer
-        # num_heads, num_tokens = attention_probs_1.shape[0], attention_probs_1.shape[1]
-        # path = f'/mnt/petrelfs/wuxiaoxue/large-video-v2/attnention_map/train1/{tsp_index}_{layer_index}.png'
-        # dict_path = f'/mnt/petrelfs/wuxiaoxue/large-video-v2/attnention_map/train1/{tsp_index}_{layer_index}.pkl'
-        # # fig, axes = plt.subplots(3, 3, figsize=(15, 15))
-        # attention_probs_1 = attention_probs_1.cpu().numpy()
-        # # 平均矩阵（对于所有 head 求平均）
-        # mean_attention_probs = np.mean(attention_probs_1, axis=0)
-
-        # my_dict[f'{tsp_index}_{layer_index}'] = mean_attention_probs
-        # import pickle
-        # with open(dict_path, 'wb') as f:
-        #     pickle.dump(my_dict, f)
-
-        # plt.figure(figsize=(32, 32))
-        # sns.heatmap(mean_attention_probs, cmap='viridis', cbar=True)
-        # plt.axis('off')
-        # plt.title(f"Average Attention Probs {tsp_index}_{layer_index}")
-        # plt.savefig(path, dpi=300)
-        # plt.close()
-
-        # # 遍历所有的 attention head 绘制热图
-        # for i in range(num_heads):
-        #     ax = axes[i // 3, i % 3]  # 计算当前要画的子图位置
-        #     sns.heatmap(attention_probs_1[i], cmap="viridis", cbar=True, ax=ax, 
-        #                 xticklabels=[0, num_tokens - 1], yticklabels=[0, num_tokens - 1])
-        #     ax.set_title(f"Head {i}")
-        #     ax.set_xlabel("Token Index")
-        #     ax.set_ylabel("Token Index")
-        #     ax.set_xticks([0, num_tokens - 1])
-        #     ax.set_yticks([0, num_tokens - 1])
-
-        # # 绘制平均值的热图
-        # axes[2, 2].imshow(mean_attention_probs, cmap="viridis")
-        # axes[2, 2].set_title("Average QK Matrix")
-        # axes[2, 2].set_xlabel("Token Index")
-        # axes[2, 2].set_ylabel("Token Index")
-        # axes[2, 2].set_xticks([0, num_tokens - 1])
-        # axes[2, 2].set_yticks([0, num_tokens - 1])
-
-        # # 调整子图布局
-        # plt.suptitle(f"QK Similarity Matrices for timestep {tsp_index} and layer {layer_index}", fontsize=16)
-        # plt.tight_layout()
-        # plt.subplots_adjust(top=0.92)
-        # plt.savefig(path)
-        # plt.close(fig)
-        # global_variable += 1
-        ####################画QK图#######################
-
         # compute attention output 
         hidden_states = torch.einsum('... h i j, ... h j d -> ... h i d', attention_probs, value)
         hidden_states = rearrange(hidden_states, 'b h f d -> b f (h d)')
