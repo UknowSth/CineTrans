@@ -1,6 +1,6 @@
 task: t2v-1.3B
 size: "832*480"
-ckpt_dir: /mnt/petrelfs/wuxiaoxue/Wan2.1/Wan2.1-T2V-1.3B
+ckpt_dir: ./Wan2.1-T2V-1.3B
 offload_model: True
 t5_cpu: True
 sample_shift: 8
