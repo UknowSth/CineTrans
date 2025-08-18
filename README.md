@@ -71,5 +71,16 @@ Using a single A100 GPU, generating a single video takes approximately 5min. You
 
 ## 📑 BiTeX  
 If you find [CineTrans](https://github.com/UknowSth/CineTrans.git) useful for your research and applications, please cite using this BibTeX:
+```
+@misc{wu2025cinetranslearninggeneratevideos,
+      title={CineTrans: Learning to Generate Videos with Cinematic Transitions via Masked Diffusion Models}, 
+      author={Xiaoxue Wu and Bingjie Gao and Yu Qiao and Yaohui Wang and Xinyuan Chen},
+      year={2025},
+      eprint={2508.11484},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2508.11484}, 
+}
+```
 
 
