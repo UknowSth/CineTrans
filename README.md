@@ -2,7 +2,7 @@
 
 This repository contains the official PyTorch implementation of CineTrans, a novel framework for generating videos with controllable cinematic transitions via masked diffusion models.
 
-[![Paper](https://img.shields.io/badge/Paper-arXiv-red)](你的论文链接) [![Project Page](https://img.shields.io/badge/Project-Website-blue)](https://uknowsth.github.io/CineTrans/)
+[![Paper](https://img.shields.io/badge/Paper-arXiv-red)](https://arxiv.org/abs/2508.11484) [![Project Page](https://img.shields.io/badge/Project-Website-blue)](https://uknowsth.github.io/CineTrans/)
 
 ## 🎥 Demo
 https://github.com/user-attachments/assets/6f112e2f-40e3-4347-bab8-3e08bfa9366c
@@ -82,5 +82,6 @@ If you find [CineTrans](https://github.com/UknowSth/CineTrans.git) useful for yo
       url={https://arxiv.org/abs/2508.11484}, 
 }
 ```
+
 
 
