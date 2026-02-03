@@ -1,3 +1,7 @@
 .vscode
 models_sd
 __pycache__/
+pr/
+static/teaser/teaser_video.mp4
+compress_video.py
+delete.py
